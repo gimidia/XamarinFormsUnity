@@ -15,6 +15,7 @@ namespace XamarinFormsUnity.View
         public Home()
         {
             InitializeComponent();
+            BindingContext = App.Locator.StudentViewModel;
         }
     }
 }
