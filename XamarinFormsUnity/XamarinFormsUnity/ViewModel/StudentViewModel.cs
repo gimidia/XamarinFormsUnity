@@ -6,7 +6,7 @@ using XamarinFormsUnity.Interface;
 
 namespace XamarinFormsUnity.ViewModel
 {
-    public class StudentViewModel
+    public class StudentViewModel : BaseModel
     {
         private readonly IStudentService _istudentservice;
         public IEnumerable Students { get; set; }
