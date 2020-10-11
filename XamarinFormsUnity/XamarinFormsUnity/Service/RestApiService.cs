@@ -1,6 +1,7 @@
 ﻿using Refit;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using XamarinFormsUnity.Helpers;
 using XamarinFormsUnity.Interface;
 using XamarinFormsUnity.Model;
 
