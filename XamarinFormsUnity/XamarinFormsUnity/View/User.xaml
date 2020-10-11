@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFormsUnity.View.User">
+    <ListView
+            x:Name="UsersList"
+            HasUnevenRows="True"
+            ItemsSource="{Binding Users}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid Margin="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label
+                           Grid.Column = "0"
+                           FontAttributes="Bold"
+                           FontSize="Small"
+                           Text="{Binding Id}" />
+
+                        <Label
+                            Grid.Column = "1"
+                           FontSize="Medium"
+                           Text="{Binding Title}" />
+
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

@@ -17,7 +17,7 @@ namespace XamarinFormsUnity
         {
             InitializeComponent();
 
-            MainPage = new Home();
+            MainPage = new User();
         }
 
         protected override void OnStart()
