@@ -1,8 +1,4 @@
-﻿using Refit;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using Unity;
+﻿using Unity;
 using XamarinFormsUnity.Interface;
 using XamarinFormsUnity.ViewModel;
 
@@ -15,6 +11,7 @@ namespace XamarinFormsUnity.Service
         {
             _container = new UnityContainer();
             _container.RegisterType<IStudentService, StudentService>();
+            _container.RegisterType<IRestApi, RestApiService>();
             _container.RegisterInstance(typeof(StudentViewModel));
             _container.RegisterInstance(typeof(UserViewModel));
 

@@ -1,7 +1,5 @@
-﻿using Refit;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Threading.Tasks;
-using XamarinFormsUnity.Interface;
 using XamarinFormsUnity.Model;
 using XamarinFormsUnity.Service;
 
@@ -9,25 +7,26 @@ namespace XamarinFormsUnity.ViewModel
 {
     public class UserViewModel : BaseModel
     {
-
+        private readonly RestApiService _restapiservice;
         public ObservableCollection<User> Users { get; }
 
-        public UserViewModel()
+        public UserViewModel(RestApiService restapiservice)
         {
             Users = new ObservableCollection<User>();
-            LoadUsers();
+            _restapiservice = restapiservice;
+            
+            LoadUsers(_restapiservice).GetAwaiter();
         }
 
-        private async Task LoadUsers()
+        private async Task LoadUsers(RestApiService restapiservice)
         {
             Users.Clear();
-            var user_api = RestService.For<IRestApi>(EndPoints.BaseUrl);
-            var user_return = await user_api.GetTodos();
-
-            foreach (var user in user_return)
+            var user_return = await restapiservice.GetTodos();
+            foreach (var item in user_return)
             {
-                Users.Add(user);
+                Users.Add(item);
             }
+
         }
     }
 }
