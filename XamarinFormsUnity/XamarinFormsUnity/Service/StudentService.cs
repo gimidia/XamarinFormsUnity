@@ -13,12 +13,12 @@ namespace XamarinFormsUnity.Service
         {
             return new List<Student>{
 
-                new Student { Name = "Abhishek",Class="XII" },
-                new Student { Name = "Anbu",Class="XII" },
-                new Student { Name = "Akshay" ,Class="XII"},
-                new Student { Name = "Pramod" ,Class="XII"},
-                new Student { Name = "Raju" ,Class="XII"},
-                new Student { Name = "Sai" ,Class="XII"},
+                new Student { Name = "A",Class="I" },
+                new Student { Name = "B",Class="II" },
+                new Student { Name = "C" ,Class="III"},
+                new Student { Name = "D" ,Class="IV"},
+                new Student { Name = "E" ,Class="V"},
+                new Student { Name = "F" ,Class="VI"},
 
            };
         }
