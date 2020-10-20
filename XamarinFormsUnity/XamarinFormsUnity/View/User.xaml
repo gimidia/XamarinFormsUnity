@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamarinFormsUnity.View.User">
     <ListView
-            x:Name="UsersList"
+            x:Name="Lista1"
             HasUnevenRows="True"
             ItemsSource="{Binding Users}">
         <ListView.ItemTemplate>
@@ -25,8 +25,14 @@
                             Grid.Column = "1"
                            FontSize="Medium"
                            Text="{Binding Title}" />
-
-                    </Grid>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer 
+                                CommandParameter="{Binding }"
+                                Command="{Binding Path=BindingContext.ChangeAppearanceCommand, Source={x:Reference Name=Lista1},Mode=TwoWay}" 
+                                NumberOfTapsRequired="1" 
+                            />
+                            </Grid.GestureRecognizers>
+                        </Grid>
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
