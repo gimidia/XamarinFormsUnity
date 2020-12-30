@@ -1,2 +1,2 @@
 # XamarinFormsUnity
-Projeto para estudo do Xamarin.Forms IOC Container Unity
+Projeto Xamarin.Forms para estudo do IOC Container Unity
