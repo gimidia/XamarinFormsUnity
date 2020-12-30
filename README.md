@@ -1,2 +1,2 @@
 # XamarinFormsUnity
-Projeto Xamarin.Forms para estudo do IOC Container Unity
+Projeto Xamarin.Forms para estudo da biblioteca Refit com IOC Container Unity
